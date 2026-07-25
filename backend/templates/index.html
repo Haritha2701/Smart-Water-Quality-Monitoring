@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>💧 Smart Water Quality Monitoring</h1>
+
+    <!-- Summary -->
+    <div id="summary"></div>
+
+    <!-- Filter -->
+    <select id="villageFilter">
+        <option value="all">All Villages</option>
+    </select>
+
+    <button onclick="loadData()">Fetch Data</button>
+
+    <!-- Graph -->
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <!-- Cards -->
+    <div id="output"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
